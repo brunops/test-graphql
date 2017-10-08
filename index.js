@@ -7,11 +7,8 @@ const app = express()
 
 const port = 4444
 
-const root = { hello: () => 'Hello World!' }
-
 app.use('/graphql', gql({
   schema: schema,
-  rootValue: root,
   graphiql: true
 }))
 
